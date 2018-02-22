@@ -37,9 +37,7 @@ ggplot(ChickWeight, aes(x = Time, y = weight, col=Diet)) +
   geom_line(aes(group = Chick),alpha=0.3)+
   geom_smooth(lwd=2, se=FALSE)
 
-ggplot(titanic, aes(x = Pclass, fill = Sex)) +
-  geom_bar(position = "dodge") +
-  facet_grid(. ~ Survived)
+
 #Data Visulizations for Titanic dataset
 
 position_jd=position_jitterdodge(0.5,0,0.6)
