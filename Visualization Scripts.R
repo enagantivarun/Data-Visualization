@@ -39,9 +39,13 @@ ggplot(ChickWeight, aes(x = Time, y = weight, col=Diet)) +
 
 
 #Data Visulizations for Titanic dataset
-
 position_jd=position_jitterdodge(0.5,0,0.6)
 
 ggplot(Titanic_df, aes(x = Class, color = Sex)) +
   geom_bar(position = position_jd, size=3, alpha=0.5)+
   facet_grid(.~Survived)
+
+#Data Visualization for F1 
+ggplot(F1_Testing_2018, aes(x=Team, y=Laps, col=Driver, main='F1 2018 Day 4 Testing', size=Laps))+
+  geom_point()+ggtitle("F1 2018 Testing Day 4")+
+  labs(caption="@ Varun Enaganti")
